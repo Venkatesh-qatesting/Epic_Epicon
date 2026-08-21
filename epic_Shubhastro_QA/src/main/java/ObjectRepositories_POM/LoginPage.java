@@ -36,7 +36,7 @@ public class LoginPage {
 		return mobile_usernametextField;
 	}
 
-	public WebElement getGetOTPButton() {
+	public WebElement getOTPButton() {
 		return getOTPButton;
 	}
 

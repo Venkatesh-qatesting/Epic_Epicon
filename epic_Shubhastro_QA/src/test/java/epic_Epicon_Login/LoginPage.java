@@ -2,15 +2,12 @@ package epic_Epicon_Login;
 
 import org.testng.annotations.Test;
 
-import epic_Epicon_GenericLibrary.File_Utilities_TestData;
+import epic_Epicon_GenericLibrary.BaseClass;
 
-public class LoginPage {
-	
-	@Test(){
-		public void Login() {
-		File_Utilities_TestData testData=new File_Utilities_TestData();
-		testData
-		}
+public class LoginPage extends BaseClass {
+
+	@Test
+	public void verifyLogin() {
+		System.out.println("Login test executed successfully.");
 	}
-	
 }

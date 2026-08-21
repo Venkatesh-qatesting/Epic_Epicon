@@ -12,7 +12,7 @@ public class File_Utilities_TestData {
 	
 	public String PropertyFileData(String Keys)  throws IOException {
 	
-	FileInputStream fis = new FileInputStream("/epic_Shubhastro_QA/TestData/Properties.property.txt");
+	FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/TestData/Properties.property");
 	Properties Propertyfiledata = new Properties();
 	Propertyfiledata.load(fis);
 	String keys = Propertyfiledata.getProperty(Keys);
@@ -20,9 +20,11 @@ public class File_Utilities_TestData {
 	}
 	
 	public String ExcelTestData(String Sheet, int rowNo, int columnNo) throws EncryptedDocumentException, IOException {
-		FileInputStream fis = new FileInputStream("/epic_Shubhastro_QA/TestData/TestData.xlsx");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/TestData/TestData.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
-		String TestData= wb.getSheet("Sheet").getRow(rowNo).getCell(columnNo).getStringCellValue();
+		String TestData= wb.getSheet(Sheet).getRow(rowNo).getCell(columnNo).getStringCellValue();
+		wb.close();
+		fis.close();
 		return TestData;
 		
 	}
