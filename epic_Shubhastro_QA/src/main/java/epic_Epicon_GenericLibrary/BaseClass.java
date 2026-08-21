@@ -18,6 +18,7 @@ import org.apache.poi.EncryptedDocumentException;
 
 import ObjectRepositories_POM.HomePage;
 import ObjectRepositories_POM.LoginPage;
+import ObjectRepositories_POM.VerifyOtpPage;
 
 public class BaseClass {
 	public WebDriver driver;
@@ -47,9 +48,12 @@ public class BaseClass {
 		String username = fileUtilities.ExcelTestData("Sheet1", 2, 0);
 		String password = fileUtilities.ExcelTestData("Sheet1", 2, 1);
 		LoginPage loginPage = new LoginPage(driver);
+		VerifyOtpPage verifyOtpPage = new VerifyOtpPage(driver);
 		loginPage.getLoginButton().click();
 		loginPage.getMobile_usernametextField().sendKeys(username);
-		loginPage.getOTPButton().click();
+		loginPage.getLoginWithPasswordButton().click();
+		verifyOtpPage.getEnterPasswordField().sendKeys(password);
+		verifyOtpPage.getContinueToLoginButton().click();
 		System.out.println("Username and Password entered successfully.");
 	}
 

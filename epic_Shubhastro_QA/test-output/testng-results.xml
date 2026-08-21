@@ -2,105 +2,40 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-21T18:28:05 IST" name="Default suite" finished-at="2026-08-21T18:28:16 IST" duration-ms="10896">
+  <suite started-at="2026-08-21T18:49:04 IST" name="Default suite" finished-at="2026-08-21T18:49:16 IST" duration-ms="12124">
     <groups>
     </groups>
-    <test started-at="2026-08-21T18:28:05 IST" name="Default test" finished-at="2026-08-21T18:28:16 IST" duration-ms="10896">
+    <test started-at="2026-08-21T18:49:04 IST" name="Default test" finished-at="2026-08-21T18:49:16 IST" duration-ms="12124">
       <class name="epic_Epicon_Login.LoginPage">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:28:05 IST" name="beforeSuite" finished-at="2026-08-21T18:28:05 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:04 IST" name="beforeSuite" finished-at="2026-08-21T18:49:04 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:28:05 IST" name="beforeTest" finished-at="2026-08-21T18:28:09 IST" duration-ms="3549" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:04 IST" name="beforeTest" finished-at="2026-08-21T18:49:11 IST" duration-ms="6215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:28:09 IST" name="beforeClass" finished-at="2026-08-21T18:28:11 IST" duration-ms="1961" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:11 IST" name="beforeClass" finished-at="2026-08-21T18:49:13 IST" duration-ms="1968" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="verifyLogin()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:28:11 IST" name="verifyLogin" finished-at="2026-08-21T18:28:11 IST" duration-ms="34" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:13 IST" name="verifyLogin" finished-at="2026-08-21T18:49:13 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:28:11 IST" name="afterMethod" finished-at="2026-08-21T18:28:11 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:13 IST" name="afterMethod" finished-at="2026-08-21T18:49:13 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:28:11 IST" name="afterClass" finished-at="2026-08-21T18:28:16 IST" duration-ms="5046" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@aria-label='Logout']"}
-  (Session info: chrome=151.0.7922.170)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e2a208faf3ddec82b7897c601cda1732, findElement {using=xpath, value=//a[@aria-label='Logout']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.170, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\IN10\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51578}, goog:processID: 21980, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51578/devtoo..., se:cdpVersion: 151.0.7922.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e2a208faf3ddec82b7897c601cda1732]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@aria-label='Logout']"}
-  (Session info: chrome=151.0.7922.170)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.44.0', revision: 'da2039b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e2a208faf3ddec82b7897c601cda1732, findElement {using=xpath, value=//a[@aria-label='Logout']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.170, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\IN10\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51578}, goog:processID: 21980, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51578/devtoo..., se:cdpVersion: 151.0.7922.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e2a208faf3ddec82b7897c601cda1732
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-at epic_Epicon_GenericLibrary.BaseClass.afterClass(BaseClass.java:64)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:13 IST" name="afterClass" finished-at="2026-08-21T18:49:16 IST" duration-ms="3470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:28:16 IST" name="afterTest" finished-at="2026-08-21T18:28:16 IST" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:16 IST" name="afterTest" finished-at="2026-08-21T18:49:16 IST" duration-ms="404" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:28:16 IST" name="afterSuite" finished-at="2026-08-21T18:28:16 IST" duration-ms="155" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:16 IST" name="afterSuite" finished-at="2026-08-21T18:49:17 IST" duration-ms="162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

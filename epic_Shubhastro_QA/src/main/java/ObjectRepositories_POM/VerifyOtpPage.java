@@ -19,6 +19,16 @@ public class VerifyOtpPage {
 	@FindBy(xpath = "//button[contains(text(), 'Login with password')]")
 	private WebElement loginWithPasswordButton;
 
+	@FindBy(xpath = "//input[@id='login_pwd']")
+	private WebElement enterPasswordField;
+	
+	@FindBy(xpath = "//button[contains(text(),'Continue to Login')]")
+	private WebElement continueToLoginButton;
+	
+	public WebElement getContinueToLoginButton() {
+		return continueToLoginButton;
+	}
+
 	public WebElement getEnterOtpFields() {
 		return enterOtpFields;
 	}
@@ -33,6 +43,10 @@ public class VerifyOtpPage {
 
 	public WebElement getLoginWithPasswordButton() {
 		return loginWithPasswordButton;
+	}
+	
+	public WebElement getEnterPasswordField() {
+		return enterPasswordField;
 	}
 	
 	public VerifyOtpPage(WebDriver driver) {
