@@ -22,6 +22,7 @@ import ObjectRepositories_POM.LoginPage;
 public class BaseClass {
 	public WebDriver driver;
 	File_Utilities_TestData fileUtilities = new File_Utilities_TestData();
+	SeleniumUtility seleniumUtility = new SeleniumUtility();
 
 	@BeforeSuite
 	public void beforeSuite() {
@@ -35,6 +36,7 @@ public class BaseClass {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		seleniumUtility.implicitWait(driver, 5);
 		String url = fileUtilities.PropertyFileData("url");
 		driver.get(url);
 		System.out.println("Browser launched successfully.");
