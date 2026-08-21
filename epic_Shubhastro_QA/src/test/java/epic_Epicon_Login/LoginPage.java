@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import epic_Epicon_GenericLibrary.BaseClass;
 
-public class LoginPageTest extends BaseClass {
+public class LoginPage extends BaseClass {
 
 	@Test
 	public void verifyLogin() {

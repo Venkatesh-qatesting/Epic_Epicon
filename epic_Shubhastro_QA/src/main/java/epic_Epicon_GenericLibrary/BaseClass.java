@@ -44,12 +44,12 @@ public class BaseClass {
 
 	@BeforeClass
 	public void beforeClass() throws EncryptedDocumentException, IOException {
-		String username = fileUtilities.ExcelTestData("Sheet1", 3, 0);
-		String password = fileUtilities.ExcelTestData("Sheet1", 3, 1);
+		String username = fileUtilities.ExcelTestData("Sheet1", 2, 0);
+		String password = fileUtilities.ExcelTestData("Sheet1", 2, 1);
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.getLoginButton().click();
 		loginPage.getMobile_usernametextField().sendKeys(username);
-		loginPage.getGetOTPButton().click();
+		loginPage.getOTPButton().click();
 		System.out.println("Username and Password entered successfully.");
 	}
 
