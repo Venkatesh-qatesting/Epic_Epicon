@@ -14,4 +14,10 @@ public class LoginPage extends BaseClass {
 	public void verifyLogin() {
 		Reporter.log("Login test executed successfully.", true);
 	}
+	
+	@Test
+	public void verifyLoginWithInvalidCredentials() {
+		Reporter.log("Login with invalid credentials test executed successfully.", true);
+	}
+	
 }

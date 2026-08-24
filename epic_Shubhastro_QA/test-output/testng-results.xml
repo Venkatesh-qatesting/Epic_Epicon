@@ -1,42 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Connecting to the database...]]>
+    </line>
+    <line>
+      <![CDATA[Database connection established successfully.]]>
+    </line>
+    <line>
+      <![CDATA[========== Test Suite Started: Default test ==========]]>
+    </line>
+    <line>
+      <![CDATA[Launching the browser...]]>
+    </line>
+    <line>
+      <![CDATA[Browser launched successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Username and Password entered successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Test Started: verifyLoginWithInvalidCredentials]]>
+    </line>
+    <line>
+      <![CDATA[Login with invalid credentials test executed successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed: verifyLoginWithInvalidCredentials]]>
+    </line>
+    <line>
+      <![CDATA[After Method: Test method execution completed.]]>
+    </line>
+    <line>
+      <![CDATA[After Class: User logged out successfully.]]>
+    </line>
+    <line>
+      <![CDATA[After Test: Browser closed.]]>
+    </line>
+    <line>
+      <![CDATA[========== Test Suite Finished: Default test ==========]]>
+    </line>
+    <line>
+      <![CDATA[Passed Tests: 1]]>
+    </line>
+    <line>
+      <![CDATA[Failed Tests: 0]]>
+    </line>
+    <line>
+      <![CDATA[Skipped Tests: 0]]>
+    </line>
+    <line>
+      <![CDATA[After Suite: All browsers terminated and cleanup done.]]>
+    </line>
   </reporter-output>
-  <suite started-at="2026-08-21T18:49:04 IST" name="Default suite" finished-at="2026-08-21T18:49:16 IST" duration-ms="12124">
+  <suite started-at="2026-08-24T14:58:56 IST" name="Default suite" finished-at="2026-08-24T14:59:05 IST" duration-ms="9502">
     <groups>
     </groups>
-    <test started-at="2026-08-21T18:49:04 IST" name="Default test" finished-at="2026-08-21T18:49:16 IST" duration-ms="12124">
+    <test started-at="2026-08-24T14:58:56 IST" name="Default test" finished-at="2026-08-24T14:59:05 IST" duration-ms="9502">
       <class name="epic_Epicon_Login.LoginPage">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:04 IST" name="beforeSuite" finished-at="2026-08-21T18:49:04 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:epic_Epicon_Login.LoginPage@65e98b1c]" started-at="2026-08-24T14:58:56 IST" name="beforeSuite" finished-at="2026-08-24T14:58:56 IST" duration-ms="12" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Connecting to the database...]]>
+            </line>
+            <line>
+              <![CDATA[Database connection established successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:04 IST" name="beforeTest" finished-at="2026-08-21T18:49:11 IST" duration-ms="6215" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:epic_Epicon_Login.LoginPage@65e98b1c]" started-at="2026-08-24T14:58:56 IST" name="beforeTest" finished-at="2026-08-24T14:59:00 IST" duration-ms="3710" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Launching the browser...]]>
+            </line>
+            <line>
+              <![CDATA[Browser launched successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:11 IST" name="beforeClass" finished-at="2026-08-21T18:49:13 IST" duration-ms="1968" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:epic_Epicon_Login.LoginPage@65e98b1c]" started-at="2026-08-24T14:59:00 IST" name="beforeClass" finished-at="2026-08-24T14:59:02 IST" duration-ms="2224" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Username and Password entered successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="verifyLogin()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:13 IST" name="verifyLogin" finished-at="2026-08-21T18:49:13 IST" duration-ms="13" status="PASS">
+        <test-method signature="verifyLoginWithInvalidCredentials()[pri:0, instance:epic_Epicon_Login.LoginPage@65e98b1c]" started-at="2026-08-24T14:59:02 IST" name="verifyLoginWithInvalidCredentials" finished-at="2026-08-24T14:59:02 IST" duration-ms="6" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Test Started: verifyLoginWithInvalidCredentials]]>
+            </line>
+            <line>
+              <![CDATA[Login with invalid credentials test executed successfully.]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed: verifyLoginWithInvalidCredentials]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:13 IST" name="afterMethod" finished-at="2026-08-21T18:49:13 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:epic_Epicon_Login.LoginPage@65e98b1c]" started-at="2026-08-24T14:59:02 IST" name="afterClass" finished-at="2026-08-24T14:59:05 IST" duration-ms="3260" status="PASS">
           <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:13 IST" name="afterClass" finished-at="2026-08-21T18:49:16 IST" duration-ms="3470" status="PASS">
-          <reporter-output>
+            <line>
+              <![CDATA[After Class: User logged out successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:16 IST" name="afterTest" finished-at="2026-08-21T18:49:16 IST" duration-ms="404" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:epic_Epicon_Login.LoginPage@65e98b1c]" started-at="2026-08-24T14:59:02 IST" name="afterMethod" finished-at="2026-08-24T14:59:02 IST" duration-ms="0" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[After Method: Test method execution completed.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:epic_Epicon_Login.LoginPage@65e98b1c]" started-at="2026-08-24T14:59:05 IST" name="afterTest" finished-at="2026-08-24T14:59:05 IST" duration-ms="238" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[After Test: Browser closed.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:epic_Epicon_Login.LoginPage@279fedbd]" started-at="2026-08-21T18:49:16 IST" name="afterSuite" finished-at="2026-08-21T18:49:17 IST" duration-ms="162" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:epic_Epicon_Login.LoginPage@65e98b1c]" started-at="2026-08-24T14:59:05 IST" name="afterSuite" finished-at="2026-08-24T14:59:06 IST" duration-ms="135" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[After Suite: All browsers terminated and cleanup done.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- epic_Epicon_Login.LoginPage -->
