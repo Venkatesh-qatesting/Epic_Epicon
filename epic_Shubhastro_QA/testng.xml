@@ -3,7 +3,7 @@
 <suite name="Epic Epicon Test Suite">
 	<test name="Login Test">
 		<classes>
-			<class name="epic_Epicon_Login.LoginPageTest" />
+			<class name="epic_Epicon_Login.LoginPage" />
 		</classes>
 	</test>
 </suite>

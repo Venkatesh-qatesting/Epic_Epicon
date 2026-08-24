@@ -11,7 +11,7 @@ import epic_Epicon_GenericLibrary.BaseClass;
 import epic_Epicon_GenericLibrary.ListenerClass;
 
 @Listeners(ListenerClass.class)
-public class LoginPageTest extends BaseClass {
+public class LoginPage extends BaseClass {
 
 	/**
 	 * This test runs ONCE per row in the "Login" sheet of Excel.
