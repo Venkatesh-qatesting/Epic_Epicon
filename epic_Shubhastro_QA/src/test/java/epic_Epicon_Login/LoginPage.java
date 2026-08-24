@@ -5,7 +5,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import ObjectRepositories_POM.LoginPage;
+import ObjectRepositories_POM.LoginPageLocators;
 import ObjectRepositories_POM.VerifyOtpPage;
 import epic_Epicon_GenericLibrary.BaseClass;
 import epic_Epicon_GenericLibrary.ListenerClass;
@@ -33,7 +33,7 @@ public class LoginPage extends BaseClass {
 		Reporter.log("Expected Result: " + expectedResult, true);
 
 		// Step 1: Click Login button on home page
-		LoginPage loginPage = new LoginPage(driver);
+		LoginPageLocators loginPage = new LoginPageLocators(driver);
 		loginPage.getLoginButton().click();
 
 		// Step 2: Enter username

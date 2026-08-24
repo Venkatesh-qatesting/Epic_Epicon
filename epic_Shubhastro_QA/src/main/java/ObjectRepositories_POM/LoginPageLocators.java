@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPageLocators {
 	
 	@FindBy(xpath = "//a/span[.='Login']")
 		private WebElement loginButton;
@@ -56,12 +56,12 @@ public class LoginPage {
 		return googleLoginButton;
 	}
 
-	public LoginPage(WebDriver driver) {
+	public LoginPageLocators(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 	
 	public void Login(WebDriver driver, String username) {
-	LoginPage login = new LoginPage(driver);
+	LoginPageLocators login = new LoginPageLocators(driver);
 	login.mobile_usernametextField.sendKeys(username);
 	login.getOTPButton.click();
 		}
