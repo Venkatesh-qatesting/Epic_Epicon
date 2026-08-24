@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -20,33 +21,33 @@ import ObjectRepositories_POM.HomePage;
 import ObjectRepositories_POM.LoginPage;
 import ObjectRepositories_POM.VerifyOtpPage;
 
-public class BaseClass {
+public class BaseClass implements IPath {
 	public WebDriver driver;
 	File_Utilities_TestData fileUtilities = new File_Utilities_TestData();
 	SeleniumUtility seleniumUtility = new SeleniumUtility();
 
 	@BeforeSuite
 	public void beforeSuite() {
-		System.out.println("Connecting to the database...");
-		System.out.println("Database connection established successfully.");
+		Reporter.log("Connecting to the database...", true);
+		Reporter.log("Database connection established successfully.", true);
 	}
 
 	@BeforeTest
 	public void beforeTest() throws IOException {
-		System.out.println("Launching the browser...");
+		Reporter.log("Launching the browser...", true);
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		seleniumUtility.implicitWait(driver, 5);
 		String url = fileUtilities.PropertyFileData("url");
 		driver.get(url);
-		System.out.println("Browser launched successfully.");
+		Reporter.log("Browser launched successfully.", true);
 	}
 
 	@BeforeClass
 	public void beforeClass() throws EncryptedDocumentException, IOException {
-		String username = fileUtilities.ExcelTestData("Sheet1", 2, 0);
-		String password = fileUtilities.ExcelTestData("Sheet1", 2, 1);
+		String username = fileUtilities.ExcelTestData(EXCEL_SHEET_NAME, 2, 0);
+		String password = fileUtilities.ExcelTestData(EXCEL_SHEET_NAME, 2, 1);
 		LoginPage loginPage = new LoginPage(driver);
 		VerifyOtpPage verifyOtpPage = new VerifyOtpPage(driver);
 		loginPage.getLoginButton().click();
@@ -54,26 +55,26 @@ public class BaseClass {
 		loginPage.getLoginWithPasswordButton().click();
 		verifyOtpPage.getEnterPasswordField().sendKeys(password);
 		verifyOtpPage.getContinueToLoginButton().click();
-		System.out.println("Username and Password entered successfully.");
+		Reporter.log("Username and Password entered successfully.", true);
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("After Method: Test method execution completed.");
+		Reporter.log("After Method: Test method execution completed.", true);
 	}
 
 	@AfterClass
 	public void afterClass() {
 		HomePage homePage = new HomePage(driver);
 		homePage.getLogoutButton().click();
-		System.out.println("After Class: User logged out successfully.");
+		Reporter.log("After Class: User logged out successfully.", true);
 	}
 
 	@AfterTest
 	public void afterTest() {
 		if (driver != null) {
 			driver.close();
-			System.out.println("After Test: Browser closed.");
+			Reporter.log("After Test: Browser closed.", true);
 		}
 	}
 
@@ -81,7 +82,7 @@ public class BaseClass {
 	public void afterSuite() {
 		if (driver != null) {
 			driver.quit();
-			System.out.println("After Suite: All browsers terminated and cleanup done.");
+			Reporter.log("After Suite: All browsers terminated and cleanup done.", true);
 		}
 	}
 }

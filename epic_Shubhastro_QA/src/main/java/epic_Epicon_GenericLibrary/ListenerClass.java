@@ -12,23 +12,24 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 public class ListenerClass implements ITestListener, IPath {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		System.out.println("Test Started: " + result.getName());
+		Reporter.log("Test Started: " + result.getName(), true);
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("Test Passed: " + result.getName());
+		Reporter.log("Test Passed: " + result.getName(), true);
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		System.out.println("Test Failed: " + result.getName());
-		System.out.println("Failure Reason: " + result.getThrowable().getMessage());
+		Reporter.log("Test Failed: " + result.getName(), true);
+		Reporter.log("Failure Reason: " + result.getThrowable().getMessage(), true);
 
 		// Take screenshot on failure
 		Object testClass = result.getInstance();
@@ -36,31 +37,32 @@ public class ListenerClass implements ITestListener, IPath {
 
 		if (driver != null) {
 			String screenshotPath = takeScreenshot(driver, result.getName());
-			System.out.println("Screenshot saved at: " + screenshotPath);
+			Reporter.log("Screenshot saved at: " + screenshotPath, true);
+			Reporter.log("<a href='" + screenshotPath + "'><img src='" + screenshotPath + "' height='200' width='300'/></a>");
 		}
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		System.out.println("Test Skipped: " + result.getName());
+		Reporter.log("Test Skipped: " + result.getName(), true);
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		System.out.println("Test Failed within success percentage: " + result.getName());
+		Reporter.log("Test Failed within success percentage: " + result.getName(), true);
 	}
 
 	@Override
 	public void onStart(ITestContext context) {
-		System.out.println("========== Test Suite Started: " + context.getName() + " ==========");
+		Reporter.log("========== Test Suite Started: " + context.getName() + " ==========", true);
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		System.out.println("========== Test Suite Finished: " + context.getName() + " ==========");
-		System.out.println("Passed Tests: " + context.getPassedTests().size());
-		System.out.println("Failed Tests: " + context.getFailedTests().size());
-		System.out.println("Skipped Tests: " + context.getSkippedTests().size());
+		Reporter.log("========== Test Suite Finished: " + context.getName() + " ==========", true);
+		Reporter.log("Passed Tests: " + context.getPassedTests().size(), true);
+		Reporter.log("Failed Tests: " + context.getFailedTests().size(), true);
+		Reporter.log("Skipped Tests: " + context.getSkippedTests().size(), true);
 	}
 
 	/**
@@ -81,7 +83,7 @@ public class ListenerClass implements ITestListener, IPath {
 			File destFile = new File(filePath);
 			FileUtils.copyFile(srcFile, destFile);
 		} catch (IOException e) {
-			System.out.println("Failed to take screenshot: " + e.getMessage());
+			Reporter.log("Failed to take screenshot: " + e.getMessage(), true);
 		}
 
 		return filePath;
