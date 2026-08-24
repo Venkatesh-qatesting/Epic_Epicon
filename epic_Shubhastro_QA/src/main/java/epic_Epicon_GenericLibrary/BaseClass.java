@@ -72,6 +72,6 @@ public class BaseClass implements IPath {
 	 */
 	@DataProvider(name = "loginData")
 	public Object[][] getLoginData() throws EncryptedDocumentException, IOException {
-		return fileUtilities.getExcelDataForDataProvider("Login");
+		return fileUtilities.getExcelDataForDataProvider(EXCEL_SHEET_NAME);
 	}
 }

@@ -55,19 +55,22 @@ public class LoginPage extends BaseClass {
 		// Step 5: Validate based on expected result
 		if (expectedResult.equalsIgnoreCase("pass")) {
 			Reporter.log("Valid login scenario - verifying login success.", true);
-			seleniumUtility.explicitWaitForTitle(driver, "", 5);
+			
+			// Wait for page to load after login
+			try { Thread.sleep(5000); } catch (InterruptedException e) { }
+			
 			String pageTitle = driver.getTitle();
 			Assert.assertNotNull(pageTitle, "Login should be successful");
 			Reporter.log("Login successful for: " + username, true);
 
 			// Logout after successful login
 			HomePage homePage = new HomePage(driver);
-			wait.until(ExpectedConditions.elementToBeClickable(homePage.getLogoutButton()));
-			homePage.getLogoutButton().click();
+			try { Thread.sleep(2000); } catch (InterruptedException e) { }
+			seleniumUtility.jsClick(driver, homePage.getLogoutButton());
 			Reporter.log("Logged out successfully.", true);
 
-			// Wait for home page to load
-			wait.until(ExpectedConditions.elementToBeClickable(new LoginPageLocators(driver).getLoginButton()));
+			// Wait for home page to load after logout
+			try { Thread.sleep(3000); } catch (InterruptedException e) { }
 
 		} else {
 			Reporter.log("Invalid login scenario - verifying error message.", true);

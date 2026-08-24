@@ -9,7 +9,7 @@ public interface IPath {
 
 	String PROPERTY_FILE_PATH = System.getProperty("user.dir") + "/TestData/Properties.property";
 	String EXCEL_FILE_PATH = System.getProperty("user.dir") + "/TestData/TestData.xlsx";
-	String EXCEL_SHEET_NAME = "Sheet1";
+	String EXCEL_SHEET_NAME = "Login";
 	String SCREENSHOT_FOLDER_PATH = System.getProperty("user.dir") + "/Screenshots/";
 
 }
