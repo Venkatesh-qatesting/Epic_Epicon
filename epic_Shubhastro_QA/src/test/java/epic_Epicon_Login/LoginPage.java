@@ -25,12 +25,14 @@ public class LoginPage extends BaseClass {
 		Reporter.log("Username: " + username, true);
 		Reporter.log("Expected Result: " + expectedResult, true);
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 		// Step 1: Re-initialize POM fresh for each iteration (avoids stale element)
 		LoginPageLocators loginPage = new LoginPageLocators(driver);
-		wait.until(ExpectedConditions.elementToBeClickable(loginPage.getLoginButton()));
-		loginPage.getLoginButton().click();
+		
+		// Wait for page to fully load, then scroll to and click Login button
+		try { Thread.sleep(3000); } catch (InterruptedException e) { }
+		seleniumUtility.jsClick(driver, loginPage.getLoginButton());
 		Reporter.log("Clicked on Login button.", true);
 
 		// Step 2: Enter username

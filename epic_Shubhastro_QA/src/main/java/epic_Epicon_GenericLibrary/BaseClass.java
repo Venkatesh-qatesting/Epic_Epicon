@@ -18,8 +18,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass implements IPath {
 	public WebDriver driver;
-	File_Utilities_TestData fileUtilities = new File_Utilities_TestData();
-	SeleniumUtility seleniumUtility = new SeleniumUtility();
+	protected File_Utilities_TestData fileUtilities = new File_Utilities_TestData();
+	protected SeleniumUtility seleniumUtility = new SeleniumUtility();
 
 	@BeforeSuite
 	public void beforeSuite() {
