@@ -2,24 +2,19 @@ package epic_Epicon_GenericLibrary;
 
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 
-import org.apache.poi.EncryptedDocumentException;
-
-import ObjectRepositories_POM.HomePage;
-import ObjectRepositories_POM.LoginPage;
-import ObjectRepositories_POM.VerifyOtpPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass implements IPath {
 	public WebDriver driver;
@@ -44,30 +39,14 @@ public class BaseClass implements IPath {
 		Reporter.log("Browser launched successfully.", true);
 	}
 
-	@BeforeClass
-	public void beforeClass() throws EncryptedDocumentException, IOException {
-		String username = fileUtilities.ExcelTestData(EXCEL_SHEET_NAME, 2, 0);
-		String password = fileUtilities.ExcelTestData(EXCEL_SHEET_NAME, 2, 1);
-		LoginPage loginPage = new LoginPage(driver);
-		VerifyOtpPage verifyOtpPage = new VerifyOtpPage(driver);
-		loginPage.getLoginButton().click();
-		loginPage.getMobile_usernametextField().sendKeys(username);
-		loginPage.getLoginWithPasswordButton().click();
-		verifyOtpPage.getEnterPasswordField().sendKeys(password);
-		verifyOtpPage.getContinueToLoginButton().click();
-		Reporter.log("Username and Password entered successfully.", true);
+	@BeforeMethod
+	public void beforeMethod() {
+		Reporter.log("Before Method: Preparing for test execution.", true);
 	}
 
 	@AfterMethod
 	public void afterMethod() {
 		Reporter.log("After Method: Test method execution completed.", true);
-	}
-
-	@AfterClass
-	public void afterClass() {
-		HomePage homePage = new HomePage(driver);
-		homePage.getLogoutButton().click();
-		Reporter.log("After Class: User logged out successfully.", true);
 	}
 
 	@AfterTest
@@ -84,5 +63,15 @@ public class BaseClass implements IPath {
 			driver.quit();
 			Reporter.log("After Suite: All browsers terminated and cleanup done.", true);
 		}
+	}
+
+	/**
+	 * DataProvider that reads all rows from the "Login" sheet in Excel.
+	 * Row 0 = header (skipped), Row 1 onwards = test data.
+	 * Each row becomes one test iteration.
+	 */
+	@DataProvider(name = "loginData")
+	public Object[][] getLoginData() throws EncryptedDocumentException, IOException {
+		return fileUtilities.getExcelDataForDataProvider("Login");
 	}
 }
