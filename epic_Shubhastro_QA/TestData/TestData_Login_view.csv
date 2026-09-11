@@ -1,0 +1,4 @@
+username,password,expectedResult
+59@yopmail.com,Test@123,pass
+5@yopmail.com,Test@123,fail
+59@yopmail.com,Test@122,fail

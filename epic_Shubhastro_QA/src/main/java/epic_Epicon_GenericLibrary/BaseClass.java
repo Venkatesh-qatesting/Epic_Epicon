@@ -40,8 +40,13 @@ public class BaseClass implements IPath {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod() throws IOException {
 		Reporter.log("Before Method: Preparing for test execution.", true);
+		// Reset to a clean home page before every test so tests are independent of
+		// each other's end state (e.g. a prior test leaving the login modal open).
+		if (driver != null) {
+			driver.navigate().to(fileUtilities.PropertyFileData("url"));
+		}
 	}
 
 	@AfterMethod

@@ -1,13 +1,18 @@
 package ObjectRepositories_POM;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPageLocators {
-	
-	@FindBy(xpath = "//a/span[.='Login']")
+
+	// Reusable locator for the Login button (used with presence-based waits).
+	public static final By LOGIN_BUTTON = By
+			.xpath("//a[contains(normalize-space(.), 'Login')] | //button[contains(normalize-space(.), 'Login')]");
+
+	@FindBy(xpath = "//a[contains(normalize-space(.), 'Login')] | //button[contains(normalize-space(.), 'Login')]")
 		private WebElement loginButton;
 	
 	@FindBy(xpath = "//input[@id='mobile_number']")

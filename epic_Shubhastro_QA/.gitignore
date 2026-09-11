@@ -1,1 +1,11 @@
 /target/
+
+# Test run artifacts
+/Screenshots/
+/test-output/
+
+# Temporary logs from local runs
+run*.txt
+compile*.txt
+sync*.txt
+verify_xlsx.txt

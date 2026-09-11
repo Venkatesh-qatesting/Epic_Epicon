@@ -40,11 +40,35 @@ public class SeleniumUtility {
 	}
 
 	/**
-	 * Explicit wait - wait until element is present in DOM
+	 * Explicit wait - wait until title contains the given text
 	 */
 	public void explicitWaitForTitle(WebDriver driver, String title, int seconds) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 		wait.until(ExpectedConditions.titleContains(title));
+	}
+
+	/**
+	 * Explicit wait - wait until an element located by the given locator is
+	 * present in the DOM (does not require visibility or clickability).
+	 */
+	public WebElement explicitWaitForPresence(WebDriver driver, org.openqa.selenium.By locator, int seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+		return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	}
+
+	/**
+	 * Non-throwing check for whether at least one element matching the locator is
+	 * present in the DOM within the given time. Returns true/false instead of
+	 * throwing a TimeoutException, so it is safe for optional/conditional pages.
+	 */
+	public boolean isElementPresent(WebDriver driver, org.openqa.selenium.By locator, int seconds) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+			return true;
+		} catch (org.openqa.selenium.TimeoutException e) {
+			return false;
+		}
 	}
 
 	// ==================== MOUSE ACTIONS ====================
